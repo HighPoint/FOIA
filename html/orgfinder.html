@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Finder</title>
+    <link rel="stylesheet" href="orgfinder.css">
+</head>
+<body>
+    <div class="titleCenter">Organization Finder</div>
+
+    <div id="inputContainer" class="uploadCenter">
+        <textarea id="sentenceInput" placeholder="Enter your sentences here" rows="4">Any information on the Microsoft DNC contributions before the merger with Activision.</textarea>
+        <div id="buttonContainer">
+            <button id="processRapidFuzzButton">Process RapidFuzz</button>
+            <button id="processSpacyButton">Process spaCy</button>
+        </div>
+    </div>
+
+    <div class="similarityScore">
+        <label for="similarityInput"><strong>Similarity Score:</strong></label>
+        <input type="number" id="similarityInput" value="90" min="0" max="100" />
+    </div>
+
+    <div id="loading" class="loading">
+        <img src="processing.gif" alt="Processing..." />
+    </div>
+
+    <div id="rapidfuzzOrgSection">
+        <strong>RapidFuzz Organization:</strong>
+        <table id="rapidfuzzOrgTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Organization Name</th>
+                    <th>Category Code</th>
+                    <th>Category Name</th>
+                    <th>Match Score</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="rapidfuzzKeywordSection">
+        <strong>RapidFuzz Keyword:</strong>
+        <table id="rapidfuzzKeywordTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Keyword</th>
+                    <th>Category Code</th>
+                    <th>Category Name</th>
+                    <th>Match Score</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="spacyResult">
+        <strong>spaCy:</strong>
+        <table id="resultTable">
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="orgfinder.js"></script>
+</body>
+</html>

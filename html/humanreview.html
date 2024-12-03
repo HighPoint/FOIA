@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="humanreview.css">
+  <link rel="stylesheet" href="navbar.css">
+  <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="navbar.js" defer></script>
+  <script src="humanreview.js" defer></script>
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="buttonContainer">
+    <input type="text" id="filenameTextBox" class="csvTextBox">
+    <button onclick="loadFunction()" class="csvButton">Load</button>
+    <div class="buttonWrapper">
+      <button onclick="undoFunction()" class="csvButton">Undo</button>
+      <button onclick="redoFunction()" class="csvButton">Redo</button>
+      <button onclick="revertFunction()" class="csvButton">Revert</button>
+      <button onclick="saveFunction()" class="csvButton">Save</button>
+      <button onclick="approveFunction()" class="csvButton approveButton">Approve</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="myGrid" class="ag-theme-quartz"></div>
+  </div>
+  <div>
+    <br>
+  </div>
+</body>
+</html>

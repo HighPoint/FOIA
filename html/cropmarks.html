@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspect Cropmarks</title>
+    <link rel="stylesheet" href="cropmarks_style.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <!-- Include the navigation bar -->
+    <div id="navbar"></div>
+
+    <div class="titleCenter">Inspect Cropmarks</div>
+
+    <div class="canvas-container">
+        <canvas class="pdfCanvas"></canvas>
+        <div class="coordinates">
+            <div class="filename-container">
+                <input type="text" class="filenameInput" placeholder="Enter new filename" />
+                <button id="changeFileButton">Change File</button>
+            </div>
+            <div class="pageNumber">Page <span id="pageInfo"></span></div>
+            <div>topLeft: <span id="topLeftCoord"></span></div>
+            <div>topRight: <span id="topRightCoord"></span></div>
+            <div>bottomLeft: <span id="bottomLeftCoord"></span></div>
+            <div>bottomRight: <span id="bottomRightCoord"></span></div>
+            <div class="button-container">
+                <button class="updateCropMarks">Update Cropmarks</button>
+                <button class="approveButton" id="approveButton">Approve</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="navbar.js"></script>
+    <script src="cropmarks.js"></script>
+</body>
+</html>

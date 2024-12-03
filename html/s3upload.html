@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="s3upload.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="icon" href="data:,">
+    <title>Upload File</title>
+</head>
+<body>
+
+    <!-- Include the navigation bar -->
+    <div id="navbar"></div>
+
+    <div class="titleCenter">
+        Upload File
+        <br>
+    </div>
+
+    <div>
+        <label for="agencyInput">Search and Select Government Agency:</label>
+        <input type="text" id="agencyInput" placeholder="Search for agency...">
+        <select id="agencyList" size="10" style="width: 100%; max-height: 150px; overflow-y: scroll;">
+            <option value="">Loading...</option>
+        </select>
+    </div>
+
+    <div class="dropzone" id="dropzone">
+        Drag and drop files here or click to upload
+    </div>
+    <input type="file" id="fileInput" style="display: none;" multiple>
+
+    <!-- Display the uploaded file names -->
+    <div id="fileList" class="fileList"></div>
+
+    <!-- Add buttons for upload, check cropmarks, and process file -->
+    <div class="uploadCenter">
+        <button id="uploadButton">Upload File</button>
+        <button id="checkCropmarksButton" disabled>Check Cropmarks</button>
+        <button id="processFileButton" disabled>Process File</button>
+    </div>
+
+    <script src="navbar.js"></script>
+    <script src="s3upload.js"></script>
+</body>
+</html>

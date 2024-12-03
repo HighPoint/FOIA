@@ -1,0 +1,111 @@
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: #F5F4EF;
+  margin: 10px;
+  padding: 0;
+}
+
+.titleCenter {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 120px;
+  margin-bottom: 20px;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.leftContainer, .rightContainer {
+  width: 48%;  /* Each container takes 50% minus some spacing */
+}
+
+.uploadCenter {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#uploadButton, #checkCropmarksButton, #processFileButton, #getUrlButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+#uploadButton:hover, #checkCropmarksButton:hover, #processFileButton:hover, #getUrlButton:hover {
+  background-color: #45a049;
+}
+
+#checkCropmarksButton:disabled, #processFileButton:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+#agencyInput, #urlInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.urlSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#urlInput {
+  width: 60%;
+}
+
+#getUrlButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+#iframeContainer {
+  margin-top: 20px;
+  border: 5px solid blue;  /* Changed to a 5px blue border */
+  overflow: auto;  /* Ensures a scrollbar appears if the content overflows */
+}
+
+
+#iframeContainer iframe {
+  width: 100%;
+  height: 400px;
+  overflow: auto;  /* Ensures a scrollbar inside the iframe when content is larger */
+  background-color: white;  /* Sets the default background to white */
+}
+
+.highlight {
+    background-color: yellow;  /* Highlight matching text with yellow */
+    font-weight: bold;
+}
+
+.styledButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.styledButton:hover {
+  background-color: #45a049;
+}

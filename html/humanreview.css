@@ -1,0 +1,74 @@
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: #F5F4EF;
+  margin: 10px;
+}
+
+.row {
+  display: flex;
+  height: 100%;
+}
+
+.pdfDiv {
+  flex: 50%;
+  border-width: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.pdfViewerClass {
+  width: 612px;
+  height: 792px;
+}
+
+#myGrid {
+  width: 100%; /* Set the width to 100% of its parent */
+  height: 600px; /* Set a fixed height or a height relative to the viewport */
+  background-color: lightgray;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.csvTextBox {
+  font-size: 16px;
+  padding: 8px;
+  margin-left: 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 400px; /* Increased width to make the textbox twice as long */
+}
+
+
+.csvButton {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-left: 100px; /* Space between Load and other buttons */
+}
+
+.approveButton {
+  margin-left: auto; /* Keep the approve button on the right side */
+}

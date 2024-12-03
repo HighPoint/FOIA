@@ -1,0 +1,40 @@
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: #F5F4EF;
+  margin: 10px;
+  padding: 0;
+}
+
+.container {
+  margin: 70px auto;
+  text-align: center;
+}
+
+.filename-textbox {
+  padding: 12px;
+  width: 450px; /* Increased width by 100px */
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.download-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.download-button:hover {
+  background-color: #45a049;
+}
+
+.download-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}

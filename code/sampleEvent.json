@@ -1,0 +1,17 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "s3": {
+        "bucket": {
+          "name": "foia-test-bucket",
+          "blank": "dummy"
+        },
+        "object": {
+          "key": "pdf/2024-00665-foia_logs.pdf",
+          "size": 645
+        }
+      }
+    }
+  ]
+}

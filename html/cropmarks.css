@@ -1,0 +1,78 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #F5F4EF;
+    margin: 0; /* Ensure no outer margin to align with the full-width navbar */
+    padding: 0; /* Remove default body padding */
+}
+
+.titleCenter {
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 120px; /* Move the title down to accommodate the fixed navbar */
+    margin-bottom: 10px; /* Set space between titleCenter and canvas-container */
+}
+
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 60px; /* Offset for fixed navbar */
+    padding: 20px 0;
+}
+
+.pdfCanvas {
+    /* Removed border from pdfCanvas */
+}
+
+.coordinates {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.coordinate {
+    margin: 5px;
+    font-size: 16px;
+}
+
+.pageNumber {
+    margin-bottom: 20px; /* Add 20px space below the Page element */
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Add space between buttons */
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #037a54;
+}
+
+button:disabled {
+    background-color: #cccccc; /* Gray out the button when disabled */
+    cursor: not-allowed;
+}
+
+.filenameInput {
+    padding: 8px;
+    font-size: 12px;
+    flex-grow: 1; /* Allow the input to take available space */
+    margin-right: 10px; /* Add space between input and button */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 350px; /* Set minimum width */
+}

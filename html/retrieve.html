@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="retrieve.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="icon" href="data:,">
+    <title>Retrieve FOIA</title>
+</head>
+<body>
+
+    <!-- Include the navigation bar -->
+    <div id="navbar"></div>
+
+    <div class="titleCenter">
+        Retrieve FOIA
+        <br>
+    </div>
+
+    <!-- Add a flex container to divide the content -->
+    <div class="flexContainer">
+        <div class="leftContainer">
+            <label for="agencyInput">Search and Select Government Agency:</label>
+            <input type="text" id="agencyInput" placeholder="Search for agency...">
+            <select id="agencyList" size="10" style="width: 100%; max-height: 150px; overflow-y: scroll;">
+                <option value="">Loading...</option>
+            </select>
+
+            <!-- Add new section for URL input -->
+            <div class="urlSection">
+                <label for="urlInput"><strong>Enter URL:</strong></label>
+                <input type="text" id="urlInput" placeholder="Enter URL here..." style="width: 80%;">
+                <button id="getUrlButton">Get URL</button>
+            </div>
+
+            <div class="fileTypeSection">
+                <label><strong>PDFs:</strong></label>
+                <div id="pdfFiles"></div>
+
+                <label><strong>XLSX:</strong></label>
+                <div id="xlsxFiles"></div>
+
+                <label><strong>CSV:</strong></label>
+                <div id="csvFiles"></div>
+            </div>
+
+            <!-- Add buttons for actions -->
+            <div class="uploadCenter" style="display: none;">
+                <button id="uploadButton">Upload File</button>
+                <button id="checkCropmarksButton" disabled>Check Cropmarks</button>
+                <button id="processFileButton" disabled>Process File</button>
+            </div>
+        </div>
+
+        <div class="rightContainer">
+           <img id="spinner" src="https://s3.amazonaws.com/poliscioalerts.com/spinner.gif" alt="Loading..." style="display: none; width: 50px; height: 50px; margin: 0 auto;">
+
+            <!-- Add a search bar for finding text inside the iframe (initially hidden) -->
+            <div class="iframeSearch" style="display: none;">
+                <input type="text" id="iframeSearchInput" placeholder="Find in page..." style="width: 80%;">
+                <button id="iframeSearchButton" class="styledButton">Find</button>
+            </div>
+
+            <!-- iframe to display response -->
+            <div class="iframeContainer">
+                <iframe id="urlIframe" style="width: 100%; height: 400px;" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="navbar.js"></script>
+    <script src="retrieve.js"></script>
+</body>
+</html>

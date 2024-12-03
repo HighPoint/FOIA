@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requester Finder</title>
+    <link rel="stylesheet" href="requesterfinder.css">
+</head>
+<body>
+    <div class="titleCenter">Requester Finder</div>
+
+    <div id="inputContainer" class="uploadCenter">
+        <textarea id="sentenceInput" placeholder="Enter your sentences here" rows="4">Washington Post inquires on the RNC contribution.</textarea>
+        <div id="buttonContainer">
+            <button id="processRapidFuzzButton">Process RapidFuzz</button>
+            <!-- Process spaCy Button is hidden -->
+        </div>
+    </div>
+
+    <div class="similarityScore">
+        <label for="similarityInput"><strong>Similarity Score:</strong></label>
+        <input type="number" id="similarityInput" value="90" min="0" max="100" />
+    </div>
+
+    <div id="loading" class="loading">
+        <img src="processing.gif" alt="Processing..." />
+    </div>
+
+    <div id="rapidfuzzOrgSection">
+        <strong>RapidFuzz Requester:</strong>
+        <table id="rapidfuzzOrgTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Requester Name</th>
+                    <th>Category Code</th>
+                    <th>Match Score</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Removed RapidFuzz Keyword Section -->
+
+    <!-- spaCy Result Section is hidden -->
+    <!--
+    <div id="spacyResult">
+        <strong>spaCy:</strong>
+        <table id="resultTable">
+            <tbody></tbody>
+        </table>
+    </div>
+    -->
+
+    <script src="requesterfinder.js"></script>
+</body>
+</html>

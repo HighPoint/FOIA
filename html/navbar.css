@@ -1,0 +1,149 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 14px;
+}
+
+/* Navbar Links */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+/* Navbar Link Hover Effect */
+.nav-link:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Align Right Side Links */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Notifications Dropdown Container */
+.notification-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content Style */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    right: 0; /* Align the dropdown to the right edge of the parent */
+}
+
+/* Display Dropdown Content on Hover */
+.notification-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Notification Item Styling */
+.notification-item {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Notification Links Styling */
+.notification-item a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    cursor: pointer; /* Ensure it looks clickable */
+}
+
+/* Delete Button ("x") Styling */
+.delete-notification {
+    color: red; /* Red color for the delete button */
+    cursor: pointer;
+    margin-left: 10px; /* Adjust spacing if needed */
+    font-weight: bold; /* Ensure it stands out */
+}
+
+/* Bold Unread Notifications */
+.notification-item.unread a {
+    font-weight: bold;
+}
+
+/* Normal Weight for Read Notifications */
+.notification-item.read a {
+    font-weight: normal;
+}
+
+/* ON/OFF Switch Container */
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* Switch Styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+/* Hide the Default Checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider Style */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* Slider Knob */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Checked State for Slider */
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+/* Move the Slider Knob on Checked State */
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Label for the ON/OFF Switch */
+#switch-label {
+    margin-left: 10px;
+    font-weight: bold;
+}
